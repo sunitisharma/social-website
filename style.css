@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-grey: hsl(252, 15%, 65%);
+    --color-primary: rgb(26, 40, 122);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* .profile_pic {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+} */
+
+.profile_pic {
+    width: 50px;
+    height:50px;
+    border-radius:50%;
+    overflow: hidden;
+    box-shadow:2px 2px 10px 0px #ccc;
+    text-align:center;
+    line-height:50px;
+    font-size:24px;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.text-bold {
+    font-weight: 500;
+}
+
+.text-muted {
+    color: var(--color-grey);
+}
+
+/* ===================================navbar================================ */
+
+nav {
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .search-bar {
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+nav .search-bar input[type="search"] {
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+
+}
+
+nav .search-bar input[type="search"]::placeholder {
+    color: var(--color-grey);
+}
+
+nav .create {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* popup design */
+.popup_main {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.452);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+}
+
+.popup {
+    width: 30%;
+    min-height: 80vh;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 8px 15px 15px rgb(161, 161, 161);
+    display: none;
+    padding: 15px;
+
+}
+
+
+/* ============================Main====================== */
+main {
+    position: relative;
+    top: 5.4rem;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: 18vw auto 20vw;
+    column-gap: 2rem;
+    position: relative;
+}
+
+.middle .create-post {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background: var(--color-white);
+    padding: 0.4rem var(--card-padding);
+    border-radius: var(--border-radius);
+}
+
+.middle .create-post input[type=" text"] {
+    justify-self: start;
+    width: 100%;
+    padding-left: 1rem;
+    background: transparent;
+    color: var(--color-dark);
+    margin-right: 1rem;
+}
+
+.uploadPhotoDiv {
+    position: relative;
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    background: var(--color-primary);
+    border: 1px solid black;
+    border-radius: 40px;
+    text-align: center;
+    color: white;
+
+}
+
+.uploadPhoto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.upload-photo-btn {
+    display: none;
+}
+
+/* register and login */
+.mainDiv {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(255, 174, 0); */
+}
+
+.mainDiv form{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.mainDiv form input{
+    width: 90%;
+    margin-bottom:20px;
+    background-color: rgba(161, 161, 161, 0.582);
+    height: 40px;
+    border:none;
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 15px;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+
+.mainDiv form input[type=submit]{
+    background-color: var(--color-primary);
+}
+
+.red{
+    color:red;
+}
+.green{
+    color:green;
+}
+
+
+/* =============LEFT==================== */
+
+.leftElement{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    padding-left: 15px;
+}
+.leftElement span{
+    padding: 5px;
+    cursor:pointer;
+
+}
+.leftElement:hover{
+    box-shadow: 2px 2px 4px 2px #ccc;
+    border-radius: var(--card-border-radius);
+}
+.left {
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+}
+
+/* ============================== RIGHT ================================= */
+.messages{
+    display: flex;
+    width: 100;
+    gap: 10px;
+}
+
+.right .msgBox{
+    background-color: var(--color-white);
+    padding: 10px;
+    border-radius: var(--card-border-radius);
+}
+
+.msg-title{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+/* RIGHT SEARCHBAR */
+
+.right .search-bar {
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+    margin-bottom: 15px;
+}
+.right .search-bar input[type="search"] {
+    background: transparent;
+    
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+
+}
+.right .search-bar input[type="search"]::placeholder {
+    color: var(--color-grey);
+}
+.peoples{
+    margin-bottom: 15px;
+}
+
+/* post main design */
+.post_main{
+    width:100%;
+    height:100px;
+    display:flex;
+    flex-direction:column;
+    padding:10px;
+    margin-bottom:20px;
+}
+.post_div{
+    width:100%;
+    box-shadow:5px 5px 15px 2px rgb(168, 168, 168);
+    background-color:white;
+    border-radius:20px;
+    padding:10px;
+    margin:20px 0px;
+
+
+}
+.post_image{
+    /* width:100%; */
+    /* max-height:500px; */
+    aspect-ratio: 1;
+    /* object-fit:content; */
+    border-radius:20px;
+}
+.post_title{
+    padding:8px;
+}
+.post_action{
+    display:flex;
+    justify-content: space-between;
+}
+.icon_box i{
+    margin:8px;
+    font-size:25px;
+    cursor:pointer;
+}
+.post_box{
+    border-radius:40px;
+    border:2px solid #ccc;
+    display:flex;
+    padding:10px;
+    align-items:center;
+
+}
+.post_profile{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background-color:pink;
+    margin-right:10px;
+    line-height:30px;
+    text-align: center;
+}

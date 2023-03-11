@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body>
+    <nav>
+      <div class="container">
+        <h2 class="log">Zzzzzzz</h2>
+
+        <div class="search-bar">
+          <i class="fa fa-search"></i>
+          <input type="search" placeholder="Search for Account" />
+        </div>
+        <div class="create">
+          <input type="button" class="btn btn-primary" value="hiiiiiii" />
+          <button class="btn btn-primary register_btn" for="Create post">
+            Register
+          </button>
+          <button class="btn btn-primary login_btn">Login</button>
+          <div class="profile_pic">
+            <img src="./Assets/Images/profile7.png" alt="">
+          </div>
+          <!-- <div class="profileName"></div> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- //==================================================Main================================================ -->
+    <main>
+      <div class="container">
+        <!--------------------------- left ----------------------->
+
+        <div class="left">
+          <div class="left-box">
+            <div class="leftElement">
+              <span><i class="bi bi-house"></i></span
+              ><span>
+                <h3>Home</h3>
+              </span>
+            </div>
+            <div class="leftElement">
+              <span><i class="bi bi-chat-right-dots"></i></span
+              ><span>
+                <h3>Messages</h3>
+              </span>
+            </div>
+            <div class="leftElement">
+              <span><i class="bi bi-app-indicator"></i></span
+              ><span>
+                <h3>Notification</h3>
+              </span>
+            </div>
+            <div class="leftElement">
+              <span><i class="bi bi-sliders2"></i></span
+              ><span>
+                <h3>Setting</h3>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-------------------------- Midddle ------------------->
+        <div class="middle">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illum
+          quo ullam magnam aspernatur neque, tenetur molestias obcaecati
+          cupiditate facilis magni libero veritatis, id ad asperiores, et
+          voluptate beatae ab.
+
+          <form class="create-post" action="">
+            <div class="profile_pic" >
+              <img src="./Assets/Images/profile7.png" alt="" class="search_image"/>
+            </div>
+            <input
+              type="text"
+              placeholder="What's on your mind"
+              id="create-post"
+            />
+            <div class="uploadPhotoDiv">
+              upload files
+              <input class="uploadPhoto" type="file" accept="image/*" />
+            </div>
+            <input
+              class="upload-photo-btn btn btn-primary"
+              type="submit"
+              value="Post"
+              class="  "
+            />
+          </form>
+
+          <!--post display -->
+          <div class="post_main"></div> 
+
+        </div>
+        <!-------------------------- Right ----------------------->
+        <div class="right">
+          <div class="msgBox">
+            <div class="msg-title">
+              <h4>Messages</h4>
+              <i class="bi bi-chat-right-text"></i>
+            </div>
+            <div class="search-bar">
+              <i class="fa fa-search"></i>
+              <input type="search" placeholder="Search Messages" />
+            </div>
+            <div class="peoples">
+              <div class="messages">
+                <div class="profile_pic">
+                  <img src="./Assets/Images/profile7.png" alt="" />
+                </div>
+                <div class="message">
+                  <h4>Aliaaa</h4>
+                  <small class="text-muted">hii anshul !</small>
+                </div>
+              </div>
+            </div>
+            <div class="peoples">
+              <div class="messages">
+                <div class="profile_pic">
+                  <img src="./Assets/Images/profile9.avif" alt="" />
+                </div>
+                <div class="message">
+                  <h4>Mansi Sharma</h4>
+                  <small class="text-muted">hii anshul !</small>
+                </div>
+              </div>
+            </div>
+            <div class="peoples">
+              <div class="messages">
+                <div class="profile_pic">
+                  <img src="./Assets/Images/profile10.avif" alt="" />
+                </div>
+                <div class="message">
+                  <h4>Richa Mandana</h4>
+                  <small class="text-muted">hii anshul !</small>
+                </div>
+              </div>
+            </div>
+            <div class="peoples">
+              <div class="messages">
+                <div class="profile_pic">
+                  <img src="./Assets/Images/profile12.jpeg" alt="" />
+                </div>
+                <div class="message">
+                  <h4>Parth Gupta</h4>
+                  <small class="text-muted">hey! What's up Buddy</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- popup codign start -->
+    <div class="popup_main">
+      <div class="popup"></div>
+    </div>
+
+    <!-- popup codign end -->
+
+    <!-- register form -->
+
+    <script src="./main.js"></script>
+  </body>
+</html>
